@@ -1,0 +1,88 @@
+/* Footer Section - Reach Out */
+.footer {
+  width: 100%;
+  background: white;
+  padding: 400px 20px;
+}
+
+.footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  align-items: center;
+}
+
+.footer-title {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 128px;
+  font-weight: 500;
+  line-height: 64px;
+  letter-spacing: -1.28px;
+  text-transform: uppercase;
+  color: #363636;
+  text-align: center;
+  margin: 0;
+  max-width: 725px;
+  white-space: pre-wrap;
+}
+
+/* Social Links */
+.footer-links {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-link {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-link:hover {
+  transform: translateY(-4px);
+  opacity: 0.8;
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.footer-link-text {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #333333;
+  text-align: center;
+}
+
+/* Responsive Design - Mobile at 1364px breakpoint */
+@media (max-width: 1364px) {
+  .footer {
+    padding: 232px 20px;
+  }
+  
+  .footer-title {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 72.615px;
+    letter-spacing: -1.4523px;
+  }
+  
+  /* Hide links on mobile - social dock is used instead */
+  .footer-links {
+    display: none;
+  }
+}
+
+

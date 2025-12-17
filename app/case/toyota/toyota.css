@@ -1,0 +1,438 @@
+/* Toyota Case Study Page Styles */
+
+.toyota-case-page {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+  padding: 80px 20px;
+}
+
+.case-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 290px;
+}
+
+/* Hero Section */
+.case-hero {
+  padding: 100px 0 80px;
+  text-align: center;
+}
+
+.case-title {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 64px;
+  letter-spacing: -1.28px;
+  text-transform: uppercase;
+  color: #363636;
+  margin-bottom: 40px;
+}
+
+.case-description {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #6c6c6c;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Section Styles */
+.case-section {
+  padding: 60px 0;
+}
+
+/* Image Gallery */
+.image-gallery {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-frames {
+  display: flex;
+  gap: 16px;
+}
+
+.small-frame {
+  width: 422px;
+  height: 422px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f1f1f1;
+}
+
+.small-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.big-frame {
+  width: 860px;
+  height: 645px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #ffc8e2;
+}
+
+.big-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-heading {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #444;
+  margin-bottom: 32px;
+}
+
+.section-text {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #5f5f5f;
+  margin-bottom: 24px;
+}
+
+/* Company Info */
+.company-info {
+  margin-bottom: 40px;
+}
+
+/* Context Info */
+.context-info {
+  max-width: 860px;
+}
+
+/* Section Gap */
+.section-gap {
+  margin-top: 0px;
+}
+
+/* Why Section */
+.why-section {
+  margin-bottom: 40px;
+}
+
+/* Old System Container */
+.old-system-container {
+  position: relative;
+  margin: 100px 0;
+}
+
+.old-system-label {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: -1.28px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #050505;
+  margin-top: 32px;
+}
+
+/* Big Frame Images */
+.big-frame-image {
+  width: 860px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #f6f6f6;
+  margin-bottom: 40px;
+}
+
+.big-frame-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Problems Section */
+.problems-section {
+  margin-top: 100px;
+}
+
+/* Interactions Section */
+.interactions-section {
+  margin-top: 100px;
+}
+
+/* Results Section Final */
+.results-section-final {
+  margin-top: 100px;
+}
+
+.results-list {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #050505;
+  list-style: none;
+  padding: 0;
+  margin: 32px 0;
+}
+
+.results-list li {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+/* Logo Container */
+.logo-container {
+  background: #f1f1f1;
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 108px;
+  max-width: 860px;
+  overflow: hidden;
+}
+
+.toyota-logo {
+  max-width: 338px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Lists */
+.problem-list,
+.solution-list {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: #5f5f5f;
+  padding-left: 24px;
+  margin: 24px 0;
+}
+
+.problem-list li,
+.solution-list li {
+  margin-bottom: 12px;
+}
+
+.solution-list strong {
+  color: #363636;
+  font-weight: 600;
+}
+
+/* Results Section */
+.results-section {
+  background: #f9f9f9;
+  padding: 80px 0;
+  margin: 60px 0;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 48px;
+}
+
+.result-item {
+  text-align: center;
+  padding: 32px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.result-number {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  color: #363636;
+  margin-bottom: 16px;
+}
+
+.result-label {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #6c6c6c;
+}
+
+/* Back Link */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #363636;
+  text-decoration: none;
+  padding: 16px 32px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  background: #f9f9f9;
+  border-color: #363636;
+}
+
+/* Responsive Design - Mobile at 1364px breakpoint */
+@media (max-width: 1364px) {
+  .toyota-case-page {
+    padding: 28px 12px 20px;
+  }
+  
+  .case-container {
+    padding: 0;
+    max-width: 351px;
+  }
+
+  .case-hero {
+    padding: 0 0 40px;
+  }
+
+  .case-title {
+    font-size: 40px;
+    line-height: 64px;
+    letter-spacing: -1.28px;
+    margin-bottom: 32px;
+  }
+
+  .case-description {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+
+  .case-section {
+    padding: 0;
+  }
+
+  .section-gap {
+    margin-top: 40px;
+  }
+
+  .section-heading {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .section-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  /* Image Gallery */
+  .gallery-row {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .small-frames {
+    flex-direction: row;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .small-frame {
+    width: 171px;
+    height: 172px;
+    border-radius: 12px;
+  }
+
+  .big-frame {
+    width: 351px;
+    height: 263.25px;
+    border-radius: 12px;
+  }
+
+  /* Big Frame Images */
+  .big-frame-image {
+    width: 351px;
+    border-radius: 9.795px;
+    margin-bottom: 16px;
+  }
+
+  /* Logo Container */
+  .logo-container {
+    height: 44.079px;
+    border-radius: 9.795px;
+    padding: 12px;
+    max-width: 351px;
+  }
+
+  .toyota-logo {
+    max-width: 200px;
+  }
+
+  /* Company Info */
+  .company-info {
+    margin-bottom: 20px;
+  }
+
+  /* Problems Section */
+  .problems-section {
+    margin-top: 40px;
+  }
+
+  /* Interactions Section */
+  .interactions-section {
+    margin-top: 40px;
+  }
+
+  /* Results Section Final */
+  .results-section-final {
+    margin-top: 32px;
+  }
+
+  .results-list {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 32px 0;
+  }
+
+  .results-list li {
+    margin-bottom: 40px;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .result-number {
+    font-size: 40px;
+  }
+
+  .old-system-label {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+

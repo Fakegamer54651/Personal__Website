@@ -1,0 +1,470 @@
+/* Hero Section - 100vh */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 56px;
+}
+
+/* Navigation Wrapper - Sticky across all screens */
+.hero-nav-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  width: calc(100% - 40px);
+  z-index: 1000;
+}
+
+/* Mobile: Adjust positioning */
+@media (max-width: 1364px) {
+  .hero-nav-wrapper {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    width: calc(100% - 24px);
+  }
+}
+
+.hero-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-left {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-button {
+  background: #d2d2d2;
+  border: none;
+  border-radius: 24px;
+  padding: 15px;
+  height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 9px 21px 0px rgba(0,0,0,0.1),
+              0px 38px 38px 0px rgba(0,0,0,0.09),
+              0px 85px 51px 0px rgba(0,0,0,0.05),
+              0px 151px 60px 0px rgba(0,0,0,0.01);
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: #c2c2c2;
+  transform: scale(1.1);
+}
+
+/* Menu Button */
+.menu-button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.menu-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.language-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.26px;
+  text-transform: uppercase;
+  color: #363636;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-btn {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.26px;
+  text-transform: uppercase;
+  color: #363636;
+  padding: 12px 24px;
+  width: auto;
+  line-height: 16px;
+}
+
+/* Hero Container */
+.hero-container {
+  flex: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 40px;
+}
+
+/* Location & Email - Top Center */
+.hero-location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.location-city {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1.26px;
+  color: #363636;
+  width: fit-content;
+  min-width: 220px;
+}
+
+.location-email {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 10px;
+  letter-spacing: 0.9px;
+  color: #d2d2d2;
+}
+
+/* Main Content Area */
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.hero-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Desktop: Main section layout */
+@media (min-width: 1365px) {
+  .hero-main {
+    gap: 48px;
+  }
+}
+
+/* Main Title */
+.hero-title {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 120px;
+  font-weight: 800;
+  line-height: 100px;
+  text-align: center;
+  color: #333;
+  margin: 0;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Logo Cards Container */
+.logo-cards {
+  display: flex;
+  align-items: center;
+  padding-right: 82px;
+}
+
+.logo-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -82px;
+  flex-shrink: 0;
+}
+
+.logo-card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-card {
+  background: white;
+  border-radius: 22px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 9px 21px 0px rgba(0, 0, 0, 0.05),
+              0px 38px 38px 0px rgba(0, 0, 0, 0.04),
+              0px 85px 51px 0px rgba(0, 0, 0, 0.03),
+              0px 151px 60px 0px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+/* Card Specific Positioning with Rotation */
+.card-1 {
+  width: 206.858px;
+  height: 206.858px;
+  padding-top: 24px;
+  padding-bottom: 0;
+}
+
+.card-1 .logo-card-inner {
+  transform: rotate(2deg);
+}
+
+.card-2 {
+  width: 210.193px;
+  height: 210.193px;
+  padding-bottom: 24px;
+  padding-top: 0;
+}
+
+.card-2 .logo-card-inner {
+  transform: rotate(-3deg);
+}
+
+.card-3 {
+  width: 213.464px;
+  height: 213.464px;
+  padding-top: 16px;
+  padding-bottom: 0;
+}
+
+.card-3 .logo-card-inner {
+  transform: rotate(4deg);
+}
+
+.card-4 {
+  width: 210.193px;
+  height: 210.193px;
+  padding-bottom: 32px;
+  padding-top: 0;
+}
+
+.card-4 .logo-card-inner {
+  transform: rotate(-3deg);
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 100px;
+  font-weight: 500;
+  line-height: 110px;
+  text-align: center;
+  color: #949494;
+  margin: 0;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+/* Bottom Clients List */
+.hero-clients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.clients-label {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 1.26px;
+  color: #333333;
+}
+
+.clients-list {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.9px;
+  color: #6c6c6c;
+}
+
+@media (max-width: 1364px) {
+  .clients-label {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    color: #212121;
+  }
+  
+  .clients-list {
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 1px;
+  }
+}
+
+/* Responsive Design - Mobile 375px (triggers at 1364px) */
+@media (max-width: 1364px) {
+  .hero {
+    padding: 12px;
+    gap: 56px;
+  }
+  
+  .hero-nav-wrapper {
+    width: 93%;
+  }
+  
+  .hero-container {
+    gap: 40px;
+  }
+  
+  /* Location moves to top as static element */
+  .hero-location {
+    position: static;
+    transform: none;
+    gap: 6px;
+    order: -1;
+    margin-bottom: 24px;
+  }
+  
+  .location-city {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1.26px;
+    min-width: auto;
+  }
+  
+  .location-email {
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 0.9px;
+  }
+  
+  /* Hero content */
+  .hero-content {
+    gap: 40px;
+    flex: 1;
+  }
+  
+  .hero-main {
+    gap: 36px;
+  }
+  
+  /* Title */
+  .hero-title {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 64px;
+    letter-spacing: -2.016px;
+    white-space: normal;
+  }
+  
+  /* Logo cards smaller and tighter overlap */
+  .logo-cards {
+    padding-right: 48.397px;
+  }
+  
+  .logo-card-container {
+    margin-right: -48.397px;
+  }
+  
+  .logo-card {
+    width: 118.041px;
+    height: 118.041px;
+    border-radius: 12.984px;
+  }
+  
+  .card-1 {
+    width: 124px;
+    height: 136px;
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
+  
+  .card-2 {
+    width: 124px;
+    height: 138px;
+    padding-bottom: 14.165px;
+    padding-top: 0;
+  }
+  
+  .card-3 {
+    width: 124px;
+    height: 136px;
+    padding-top: 8px;
+    padding-bottom: 0;
+  }
+  
+  .card-4 {
+    width: 124px;
+    height: 142px;
+    padding-bottom: 20px;
+    padding-top: 0;
+  }
+  
+  /* Subtitle */
+  .hero-subtitle {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: -2.016px;
+  }
+  
+  /* Clients section */
+  .hero-clients {
+    gap: 10px;
+  }
+  
+  .clients-label {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 1px;
+    color: #212121;
+  }
+  
+  .clients-list {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 1px;
+  }
+}
+
+
