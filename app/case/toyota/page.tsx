@@ -1,6 +1,5 @@
 'use client'
 
-import { Metadata } from 'next'
 import CaseNav from '../../../components/CaseNav'
 import { useLanguage } from '../../../context/LanguageContext'
 import '../../../styles/case-nav.css'
