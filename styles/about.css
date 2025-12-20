@@ -1,0 +1,377 @@
+/* About Page Wrapper */
+.about-page-wrapper {
+  min-height: 100vh;
+  background: white;
+  overflow-y: auto;
+}
+
+/* About Page Navigation - Matches hero-nav-wrapper styling */
+.about-nav-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  width: calc(100% - 40px);
+  z-index: 1000;
+}
+
+.about-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+/* About Page Container */
+.about-page-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  padding: 76px 20px 64px;
+  min-height: 100vh;
+}
+
+.about-page-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* About Container - Reuse existing menu.css styles */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 675px;
+  width: 100%;
+}
+
+.about-title {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 72px;
+  letter-spacing: -2.016px;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0;
+}
+
+.about-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-text {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.5px;
+  color: #363636;
+}
+
+.about-text p {
+  margin: 0;
+}
+
+/* Images - Reuse from menu.css */
+.about-images {
+  display: flex;
+  gap: 24px;
+}
+
+.about-image-small {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.about-image-small:hover {
+  transform: scale(1.02);
+}
+
+.about-image-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-medium {
+  width: 224px;
+  height: 224px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.about-image-medium:hover {
+  transform: scale(1.02);
+}
+
+.about-image-medium img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-rect-1 {
+  width: 158px;
+  height: 120px;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.about-image-rect-1:hover {
+  transform: scale(1.02);
+}
+
+.about-image-rect-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-rect-2 {
+  width: 227px;
+  height: 120px;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.about-image-rect-2:hover {
+  transform: scale(1.02);
+}
+
+.about-image-rect-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SnapTools Section */
+.about-snaptools {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.snaptools-logo {
+  height: 17.62px;
+  width: 188.276px;
+}
+
+.snaptools-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.snaptools-subtitle {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  color: #aaa;
+  margin: 0;
+}
+
+.snaptools-link {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.5px;
+  color: #5749b4;
+  text-decoration: underline;
+  text-underline-position: from-font;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.snaptools-link:hover {
+  opacity: 0.8;
+}
+
+.about-image-snaptools {
+  width: 374px;
+  height: 224px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.about-image-snaptools:hover {
+  transform: scale(1.02);
+}
+
+.about-image-snaptools img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Personal Images */
+.about-images-personal {
+  display: flex;
+  gap: 12px;
+}
+
+.about-image-personal-1 {
+  width: 184px;
+  height: 224px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.about-image-personal-1:hover {
+  transform: scale(1.02);
+}
+
+.about-image-personal-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-personal-2 {
+  width: 184px;
+  height: 224px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.about-image-personal-2:hover {
+  transform: scale(1.02);
+}
+
+.about-image-personal-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-personal-3 {
+  width: 386px;
+  height: 224px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.about-image-personal-3:hover {
+  transform: scale(1.02);
+}
+
+.about-image-personal-3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 1364px) {
+  .about-nav-wrapper {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    width: calc(100% - 24px);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page-container {
+    padding: 64px 20px 64px;
+  }
+
+  .about-title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .about-sections {
+    gap: 80px;
+  }
+
+  .about-images,
+  .about-images-personal {
+    flex-wrap: wrap;
+  }
+
+  .about-image-personal-3,
+  .about-image-snaptools {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-image-personal-3 img,
+  .about-image-snaptools img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .about-image-rect-2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-image-rect-2 img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .about-sections {
+    gap: 60px;
+  }
+
+  .about-image-small,
+  .about-image-medium,
+  .about-image-rect-1,
+  .about-image-rect-2,
+  .about-image-personal-1,
+  .about-image-personal-2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-image-small img,
+  .about-image-medium img,
+  .about-image-rect-1 img,
+  .about-image-rect-2 img,
+  .about-image-personal-1 img,
+  .about-image-personal-2 img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .about-images {
+    flex-direction: column;
+  }
+}
+

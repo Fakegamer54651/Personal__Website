@@ -1,0 +1,136 @@
+═══════════════════════════════════════════════════════════════════
+🎯 SEO QUICK REFERENCE GUIDE
+═══════════════════════════════════════════════════════════════════
+
+📄 CURRENT SEO TITLES & DESCRIPTIONS
+
+HOMEPAGE (/en, /ru)
+────────────────────────────────────────────────────────────────────
+EN Title: "Asilbek Khamidullayev - Product Designer & UI/UX Expert"
+EN Desc:  "Portfolio of Asilbek Khamidullayev - Product Designer 
+          specializing in UI/UX design, user research, and design 
+          systems. Based in Tashkent, Uzbekistan."
+
+RU Title: "Асилбек Хамидуллаев - Продуктовый Дизайнер и UI/UX Эксперт"
+RU Desc:  "Портфолио Асилбека Хамидуллаева - Продуктовый дизайнер, 
+          специализирующийся на UI/UX дизайне, пользовательских 
+          исследованиях и дизайн-системах. Ташкент, Узбекистан."
+
+ABOUT PAGE (/en/about, /ru/about)
+────────────────────────────────────────────────────────────────────
+EN Title: "About Asilbek - Product Designer & UI/UX Specialist"
+EN Desc:  "Learn about Asilbek Khamidullayev's journey in product 
+          design, UI/UX expertise, and design philosophy. Experience 
+          in user research, design systems, and product strategy."
+
+RU Title: "Об Асилбеке - Продуктовый Дизайнер и UI/UX Специалист"
+RU Desc:  "Узнайте о пути Асилбека Хамидуллаева в продуктовом дизайне, 
+          опыте в UI/UX и философии дизайна. Опыт в пользовательских 
+          исследованиях, дизайн-системах и продуктовой стратегии."
+
+TOYOTA CASE (/en/case/toyota, /ru/case/toyota)
+────────────────────────────────────────────────────────────────────
+EN Title: "Toyota Inventory System Redesign - UI/UX Case Study | 
+          Asilbek Khamidullayev"
+EN Desc:  "How I redesigned Toyota's dealership inventory system in 
+          Uzbekistan, reducing service overload by 17% and improving 
+          workflow efficiency through better UX and micro-interactions."
+
+RU Title: "Редизайн Системы Инвентаря Toyota - UI/UX Кейс | 
+          Асилбек Хамидуллаев"
+RU Desc:  "Как я переработал систему инвентаря дилерского центра Toyota 
+          в Узбекистане, снизив перегрузку сервиса на 17% и улучшив 
+          эффективность рабочего процесса через лучший UX и 
+          микровзаимодействия."
+
+═══════════════════════════════════════════════════════════════════
+🔧 HOW TO UPDATE SEO CONTENT
+═══════════════════════════════════════════════════════════════════
+
+File: lib/i18n.ts
+
+1. Find the seoTranslations object
+2. Update the relevant key:
+   - 'home.title' / 'home.description' / 'home.keywords'
+   - 'about.title' / 'about.description' / 'about.keywords'
+   - 'toyota.title' / 'toyota.description' / 'toyota.keywords'
+
+3. Update for BOTH languages (en and ru)
+
+4. Changes apply automatically to:
+   - Page <title> tags
+   - Meta descriptions
+   - Open Graph tags
+   - Twitter Card tags
+   - Keywords meta tag
+
+═══════════════════════════════════════════════════════════════════
+🌐 URL STRUCTURE
+═══════════════════════════════════════════════════════════════════
+
+LIVE PAGES:
+✅ https://asilbek.design/en
+✅ https://asilbek.design/ru
+✅ https://asilbek.design/en/about
+✅ https://asilbek.design/ru/about
+✅ https://asilbek.design/en/case/toyota
+✅ https://asilbek.design/ru/case/toyota
+
+PLACEHOLDER PAGES (noindex):
+⏳ https://asilbek.design/en/case/snaptools
+⏳ https://asilbek.design/ru/case/snaptools
+⏳ https://asilbek.design/en/case/clique
+⏳ https://asilbek.design/ru/case/clique
+⏳ https://asilbek.design/en/case/breadly
+⏳ https://asilbek.design/ru/case/breadly
+
+═══════════════════════════════════════════════════════════════════
+📊 STRUCTURED DATA (JSON-LD)
+═══════════════════════════════════════════════════════════════════
+
+HOMEPAGE:
+- @type: Person
+- Includes: name, jobTitle, address, worksFor, knowsAbout
+
+ABOUT PAGE:
+- @type: ["Person", "AboutPage"]
+- Includes: name, jobTitle, description, url
+
+TOYOTA CASE:
+- @type: CreativeWork
+- Includes: name, author, description, keywords, workExample
+
+═══════════════════════════════════════════════════════════════════
+🔍 TESTING URLS
+═══════════════════════════════════════════════════════════════════
+
+Google Rich Results:
+https://search.google.com/test/rich-results
+
+Facebook Debugger:
+https://developers.facebook.com/tools/debug/
+
+Twitter Card Validator:
+https://cards-dev.twitter.com/validator
+
+Hreflang Validator:
+https://technicalseo.com/tools/hreflang/
+
+═══════════════════════════════════════════════════════════════════
+✅ VERIFICATION CHECKLIST
+═══════════════════════════════════════════════════════════════════
+
+After deployment:
+□ Visit /sitemap.xml - verify 6 entries
+□ Visit /robots.txt - verify content
+□ Test each page with Google Rich Results Test
+□ Verify Open Graph tags with Facebook Debugger
+□ Check Twitter Cards with Card Validator
+□ Inspect page source for JSON-LD scripts
+□ Verify hreflang tags in <head>
+□ Check canonical URLs point correctly
+□ Test mobile responsiveness
+□ Submit sitemap to Google Search Console
+
+═══════════════════════════════════════════════════════════════════
+

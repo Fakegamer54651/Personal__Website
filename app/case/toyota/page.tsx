@@ -14,7 +14,7 @@ export default function ToyotaCasePage() {
       {/* Hero Section */}
       <section className="case-hero">
         <div className="case-container">
-          <h1 className="case-title">Toyota Uzbekistan — Redesigning Internal Inventory Workflows</h1>
+          <h1 className="case-title">{t('toyota.heroTitle')}</h1>
           <p className="case-description">
             {t('toyota.description').split('\n').map((line, i) => (
               <span key={i}>

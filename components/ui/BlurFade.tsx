@@ -1,6 +1,7 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 import {
   AnimatePresence,
   motion,
@@ -26,6 +27,7 @@ interface BlurFadeProps extends MotionProps {
   inView?: boolean
   inViewMargin?: MarginType
   blur?: string
+  skipOnRevisit?: boolean
 }
 
 export function BlurFade({
@@ -39,11 +41,37 @@ export function BlurFade({
   inView = false,
   inViewMargin = "-50px",
   blur = "6px",
+  skipOnRevisit = false,
   ...props
 }: BlurFadeProps) {
   const ref = useRef(null)
+  const pathname = usePathname()
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin })
   const isInView = !inView || inViewResult
+  
+  // Check if this is a revisit to homepage (for skipOnRevisit feature)
+  const [shouldSkipAnimation, setShouldSkipAnimation] = useState(false)
+  
+  useEffect(() => {
+    if (skipOnRevisit && typeof window !== 'undefined') {
+      // Check if we're on a homepage route (matches /en or /ru)
+      const isHomepage = pathname === '/en' || pathname === '/ru'
+      
+      if (isHomepage) {
+        const visitedKey = 'homepage-visited'
+        const hasVisited = sessionStorage.getItem(visitedKey)
+        
+        if (hasVisited === 'true') {
+          // Already visited, skip animation
+          setShouldSkipAnimation(true)
+        } else {
+          // First visit, set flag after component mounts
+          sessionStorage.setItem(visitedKey, 'true')
+        }
+      }
+    }
+  }, [skipOnRevisit, pathname])
+  
   const defaultVariants: Variants = {
     hidden: {
       [direction === "left" || direction === "right" ? "x" : "y"]:
@@ -58,6 +86,12 @@ export function BlurFade({
     },
   }
   const combinedVariants = variant || defaultVariants
+  
+  // If should skip animation, show content immediately
+  if (shouldSkipAnimation) {
+    return <div ref={ref} className={className}>{children}</div>
+  }
+  
   return (
     <AnimatePresence>
       <motion.div
@@ -79,5 +113,6 @@ export function BlurFade({
     </AnimatePresence>
   )
 }
+
 
 

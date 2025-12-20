@@ -1,28 +1,46 @@
 'use client'
 
-import { useState } from 'react'
+import Link from 'next/link'
 import { BlurFade } from './ui/BlurFade'
+import { ProximityMagneticCard } from './ui/ProximityMagneticCard'
 import { useLanguage } from '../context/LanguageContext'
-import MenuOverlay from './MenuOverlay'
 
 // Hero section - 100vh landing page
 function Hero() {
-  const { language, toggleLanguage, t } = useLanguage()
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { language, locale, toggleLanguage, t } = useLanguage()
 
-  const handleMenuClick = () => {
-    console.log('Menu button clicked!')
-    setIsMenuOpen(true)
+  // Download resume based on current language
+  const handleResumeDownload = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    
+    const resumeFiles = {
+      EN: '/Resume english.pdf',
+      RU: '/Resume Russian.pdf'
+    }
+    
+    const filenames = {
+      EN: 'Asilbek_Khamidullayev_Resume.pdf',
+      RU: 'Асилбек_Хамидуллаев_Резюме.pdf'
+    }
+    
+    const resumePath = resumeFiles[language]
+    const filename = filenames[language]
+    
+    // Create temporary link to trigger download with custom filename
+    const link = document.createElement('a')
+    link.href = resumePath
+    link.download = filename
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (
     <>
-      <MenuOverlay isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
-      
       <div className="hero">
         {/* SEO H1 - Hidden but readable by search engines */}
         <h1 className="sr-only">
-          Asilbek Khamidullayev — Product and Motion Designer, Founder of SnapTools
+          Asilbek Khamidullayev - Product Designer & UI/UX Expert
         </h1>
         
         {/* Top Navigation - Full Width & Sticky */}
@@ -30,18 +48,19 @@ function Hero() {
           <div className="hero-nav">
             <div className="nav-left">
               <BlurFade delay={0.05} duration={0.4} direction="down">
-                <button 
+                <Link 
+                  href={`/${locale}/about`}
                   className="nav-button menu-button" 
-                  aria-label="Menu"
-                  onClick={handleMenuClick}
-                  style={{ cursor: 'pointer', pointerEvents: 'auto' }}
+                  aria-label="About"
+                  title="Learn about Asilbek Khamidullayev - Product Designer"
+                  style={{ cursor: 'pointer', pointerEvents: 'auto', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                 >
                   <img 
                     src="/menu.svg" 
-                    alt="Menu" 
+                    alt="About" 
                     className="menu-icon"
                   />
-                </button>
+                </Link>
               </BlurFade>
               <BlurFade delay={0.1} duration={0.4} direction="down">
                 <button className="nav-button language-btn" onClick={toggleLanguage}>
@@ -51,10 +70,11 @@ function Hero() {
             </div>
             <BlurFade delay={0.15} duration={0.4} direction="down">
               <a 
-                href="/Asilbek_Khamidullayev_Resume.pdf" 
-                download="Asilbek_Khamidullayev_Resume.pdf"
+                href="#" 
+                onClick={handleResumeDownload}
                 className="nav-button resume-btn"
-                style={{ textDecoration: 'none' }}
+                title="Download Resume - Asilbek Khamidullayev"
+                style={{ textDecoration: 'none', cursor: 'pointer' }}
               >
                 {t('nav.resume')}
               </a>
@@ -75,6 +95,7 @@ function Hero() {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="location-email"
+                  title="SnapTools - Design Tools Platform"
                   style={{ textDecoration: 'none', color: 'inherit' }}
                 >
                   {t('hero.email')}
@@ -89,55 +110,63 @@ function Hero() {
             {/* Logo Cards */}
             <div className="logo-cards">
               <BlurFade delay={0.3} direction="down">
-                <div className="logo-card-container card-1">
-                  <div className="logo-card-inner">
-                    <div className="logo-card">
-                      <img 
-                        src="/first image.jpg" 
-                        alt="SNAPTC" 
-                      />
+                <ProximityMagneticCard magnetStrength={-24} rotationFactor={1.2} scaleFactor={1.03} proximityRange={110}>
+                  <div className="logo-card-container card-1">
+                    <div className="logo-card-inner">
+                      <div className="logo-card">
+                        <img 
+                          src="/first image.jpg" 
+                          alt="SNAPTC" 
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </ProximityMagneticCard>
               </BlurFade>
               
               <BlurFade delay={0.38} direction="down">
-                <div className="logo-card-container card-2">
-                  <div className="logo-card-inner">
-                    <div className="logo-card">
-                      <img 
-                        src="/2nd image.jpg" 
-                        alt="Toyota" 
-                      />
+                <ProximityMagneticCard magnetStrength={-24} rotationFactor={1.2} scaleFactor={1.03} proximityRange={110}>
+                  <div className="logo-card-container card-2">
+                    <div className="logo-card-inner">
+                      <div className="logo-card">
+                        <img 
+                          src="/2nd image.jpg" 
+                          alt="Toyota" 
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </ProximityMagneticCard>
               </BlurFade>
               
               <BlurFade delay={0.46} direction="down">
-                <div className="logo-card-container card-3">
-                  <div className="logo-card-inner">
-                    <div className="logo-card">
-                      <img 
-                        src="/3rd image.jpg" 
-                        alt="Delever" 
-                      />
+                <ProximityMagneticCard magnetStrength={-24} rotationFactor={1.2} scaleFactor={1.03} proximityRange={110}>
+                  <div className="logo-card-container card-3">
+                    <div className="logo-card-inner">
+                      <div className="logo-card">
+                        <img 
+                          src="/3rd image.jpg" 
+                          alt="Delever" 
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </ProximityMagneticCard>
               </BlurFade>
               
               <BlurFade delay={0.54} direction="down">
-                <div className="logo-card-container card-4">
-                  <div className="logo-card-inner">
-                    <div className="logo-card">
-                      <img 
-                        src="/4th image.jpg" 
-                        alt="Clique" 
-                      />
+                <ProximityMagneticCard magnetStrength={-24} rotationFactor={1.2} scaleFactor={1.03} proximityRange={110}>
+                  <div className="logo-card-container card-4">
+                    <div className="logo-card-inner">
+                      <div className="logo-card">
+                        <img 
+                          src="/4th image.jpg" 
+                          alt="Clique" 
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </ProximityMagneticCard>
               </BlurFade>
             </div>
           </div>

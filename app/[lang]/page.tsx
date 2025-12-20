@@ -1,0 +1,20 @@
+import Hero from '../../components/Hero'
+import FeaturedWork from '../../sections/FeaturedWork'
+import UIShots from '../../sections/UIShots'
+import Footer from '../../sections/Footer'
+import SocialDock from '../../components/SocialDock'
+import { Locale } from '../../lib/i18n'
+
+// Main landing page with locale support
+export default function Home({ params }: { params: { lang: Locale } }) {
+  return (
+    <div className="home-page">
+      <Hero />
+      <FeaturedWork />
+      <UIShots />
+      <Footer />
+      <SocialDock />
+    </div>
+  )
+}
+

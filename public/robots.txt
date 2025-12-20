@@ -1,0 +1,11 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow placeholder case study pages (not ready yet)
+Disallow: /en/case/clique
+Disallow: /ru/case/clique
+
+# Sitemap
+Sitemap: https://asilbek.design/sitemap.xml
+

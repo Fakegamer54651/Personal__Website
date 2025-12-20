@@ -1,11 +1,12 @@
 'use client'
 
+import Link from 'next/link'
 import { BlurFade } from '../components/ui/BlurFade'
 import { useLanguage } from '../context/LanguageContext'
 
 // Featured Work section with case studies grid
 function FeaturedWork() {
-  const { t } = useLanguage()
+  const { locale, t } = useLanguage()
   
   return (
     <section className="featured-work">
@@ -18,28 +19,36 @@ function FeaturedWork() {
           {/* Row 1 */}
           <div className="featured-row">
             <BlurFade delay={0.25} inView>
-              <div className="case-card snaptools-card">
+              <Link 
+                href={`/${locale}/case/delever`} 
+                className="case-card delever-card"
+                title="Delever Courier App Redesign - Mobile UX Case Study"
+              >
                 <img 
-                  src="/Snaptools card.jpg" 
-                  alt="Snaptools" 
+                  src="/Delever card.jpg" 
+                  alt="Delever" 
                   className="case-image"
                 />
                 <div className="case-image-overlay">
                   <img 
-                    src="/Snaptools card.jpg" 
-                    alt="Snaptools detail" 
+                    src="/Delever card.jpg" 
+                    alt="Delever Courier App" 
                     className="case-image"
                   />
                 </div>
                 <div className="case-hover-overlay">
                   <div className="case-gradient-overlay"></div>
-                  <p className="case-title">{t('featured.snaptools')} {t('featured.soon')}</p>
+                  <p className="case-title">{t('featured.delever')}</p>
                 </div>
-              </div>
+              </Link>
             </BlurFade>
             
             <BlurFade delay={0.33} inView>
-              <a href="/case/toyota" className="case-card toyota-card">
+              <Link 
+                href={`/${locale}/case/toyota`} 
+                className="case-card toyota-card"
+                title="Toyota Inventory System Redesign - UI/UX Case Study"
+              >
                 <img 
                   src="/TOYOTA HOVER.jpg" 
                   alt="Toyota" 
@@ -56,7 +65,7 @@ function FeaturedWork() {
                   <div className="case-gradient-overlay"></div>
                   <p className="case-title">{t('featured.toyota')}</p>
                 </div>
-              </a>
+              </Link>
             </BlurFade>
           </div>
           
@@ -78,22 +87,26 @@ function FeaturedWork() {
                 </div>
                 <div className="case-hover-overlay">
                   <div className="case-gradient-overlay"></div>
-                  <p className="case-title">{t('featured.clique')} {t('featured.soon')}</p>
+                  <p className="case-title">{t('featured.clique')} {t('featured.nda')}</p>
                 </div>
               </div>
             </BlurFade>
             
             <BlurFade delay={0.49} inView>
-              <div className="case-card bready-card">
+              <Link 
+                href={`/${locale}/case/breadly`} 
+                className="case-card bready-card"
+                title="Breadly Website Design - Clean UI/UX Case Study"
+              >
                 <img 
                   src="/Breadly card.jpg" 
-                  alt="Bready" 
+                  alt="Breadly" 
                   className="case-image"
                 />
                 <div className="case-image-overlay">
                   <img 
                     src="/Breadly card.jpg" 
-                    alt="Bready detail" 
+                    alt="Breadly Bakery" 
                     className="case-image"
                   />
                 </div>
@@ -101,7 +114,7 @@ function FeaturedWork() {
                   <div className="case-gradient-overlay"></div>
                   <p className="case-title">{t('featured.breadly')}</p>
                 </div>
-              </div>
+              </Link>
             </BlurFade>
           </div>
         </div>

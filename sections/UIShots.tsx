@@ -20,7 +20,7 @@ function UIShots() {
             <BlurFade delay={0.25} inView>
               <div className="ui-card">
                 <img 
-                  src="https://www.figma.com/api/mcp/asset/e6ddf3e2-b904-429e-bcad-2890fe918470" 
+                  src="/UI card 1.jpg" 
                   alt="UI Shot 1" 
                   className="ui-image"
                 />
@@ -36,7 +36,7 @@ function UIShots() {
                   muted 
                   playsInline
                 >
-                  <source src="/clique.mp4" type="video/mp4" />
+                  <source src="/2nd .mp4" type="video/mp4" />
                 </video>
               </div>
             </BlurFade>
@@ -44,7 +44,7 @@ function UIShots() {
             <BlurFade delay={0.41} inView>
               <div className="ui-card">
                 <img 
-                  src="https://www.figma.com/api/mcp/asset/d96cdf0a-214e-4dd4-ae05-72fba122a2bf" 
+                  src="/UI card 3.jpg" 
                   alt="UI Shot 3" 
                   className="ui-image"
                 />
@@ -57,7 +57,7 @@ function UIShots() {
             <BlurFade delay={0.49} inView>
               <div className="ui-card">
                 <img 
-                  src="https://www.figma.com/api/mcp/asset/926b206f-69ec-4dcf-b297-5d00f1a0d012" 
+                  src="/UI card 4.jpg" 
                   alt="UI Shot 4" 
                   className="ui-image"
                 />
@@ -73,7 +73,7 @@ function UIShots() {
                   muted 
                   playsInline
                 >
-                  <source src="/icons.mp4" type="video/mp4" />
+                  <source src="/4th.mp4" type="video/mp4" />
                 </video>
               </div>
             </BlurFade>
@@ -81,7 +81,7 @@ function UIShots() {
             <BlurFade delay={0.65} inView>
               <div className="ui-card">
                 <img 
-                  src="https://www.figma.com/api/mcp/asset/f344ad7a-2cac-4f29-bb23-f268486cc31e" 
+                  src="/UI card 6.jpg" 
                   alt="UI Shot 6" 
                   className="ui-image"
                 />
@@ -95,5 +95,6 @@ function UIShots() {
 }
 
 export default UIShots
+
 
 

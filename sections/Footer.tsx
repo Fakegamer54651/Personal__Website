@@ -16,9 +16,15 @@ function Footer() {
         
         <div className="footer-links">
           <BlurFade delay={0.25} inView>
-            <a href="https://www.linkedin.com/in/asilbek-khamidullayev/" target="_blank" rel="noopener noreferrer" className="footer-link">
+            <a 
+              href="https://www.linkedin.com/in/asilbek-khamidullayev/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="footer-link"
+              title="Connect with Asilbek Khamidullayev on LinkedIn"
+            >
               <img 
-                src="https://www.figma.com/api/mcp/asset/6deaa980-2eba-4faf-84f3-be2a7f541e12" 
+                src="/linked in.svg" 
                 alt="LinkedIn" 
                 className="footer-icon"
               />
@@ -27,9 +33,13 @@ function Footer() {
           </BlurFade>
           
           <BlurFade delay={0.33} inView>
-            <a href="mailto:asilbekkhamidullayevv@gmail.com" className="footer-link">
+            <a 
+              href="mailto:asilbekkhamidullayevv@gmail.com" 
+              className="footer-link"
+              title="Email Asilbek Khamidullayev - Product Designer"
+            >
               <img 
-                src="https://www.figma.com/api/mcp/asset/afa711cd-3cb6-4c7d-9f73-17641991b4a0" 
+                src="/Email.svg" 
                 alt="Email" 
                 className="footer-icon"
               />
@@ -38,9 +48,15 @@ function Footer() {
           </BlurFade>
           
           <BlurFade delay={0.41} inView>
-            <a href="https://t.me/AsilbekKhamidullayev" target="_blank" rel="noopener noreferrer" className="footer-link">
+            <a 
+              href="https://t.me/AsilbekKhamidullayev" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="footer-link"
+              title="Message Asilbek Khamidullayev on Telegram"
+            >
               <img 
-                src="https://www.figma.com/api/mcp/asset/f9a9ecb9-2440-48cb-aa8e-aa1e3ec42ef9" 
+                src="/Telegram.svg" 
                 alt="Telegram" 
                 className="footer-icon"
               />
@@ -54,5 +70,6 @@ function Footer() {
 }
 
 export default Footer
+
 
 
