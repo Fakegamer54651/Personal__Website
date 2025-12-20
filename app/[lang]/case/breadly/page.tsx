@@ -138,3 +138,4 @@ export default function BreadlyCasePage({ params }: { params: { lang: Locale } }
   )
 }
 
+

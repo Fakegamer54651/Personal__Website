@@ -149,3 +149,4 @@ export default function ToyotaCasePage({ params }: { params: { lang: Locale } })
   )
 }
 
+

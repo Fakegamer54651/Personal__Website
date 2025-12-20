@@ -5,10 +5,9 @@ import Link from 'next/link'
 import { useLanguage } from '../../../context/LanguageContext'
 import ImageViewer from '../../../components/ImageViewer'
 import { BlurFade } from '../../../components/ui/BlurFade'
-import { Locale } from '../../../lib/i18n'
 
 // About page - SEO optimized standalone version
-export default function About({ params }: { params: { lang: Locale } }) {
+export default function About() {
   const { language, locale, toggleLanguage, t } = useLanguage()
   const [viewerOpen, setViewerOpen] = useState(false)
   const [viewerImages, setViewerImages] = useState<string[]>([])
@@ -205,4 +204,5 @@ export default function About({ params }: { params: { lang: Locale } }) {
     </>
   )
 }
+
 
