@@ -4,9 +4,8 @@ import CaseNav from '../../../../components/CaseNav'
 import { useLanguage } from '../../../../context/LanguageContext'
 import '../../../../styles/case-nav.css'
 import './toyota.css'
-import { Locale } from '../../../../lib/i18n'
 
-export default function ToyotaCasePage({ params }: { params: { lang: Locale } }) {
+export default function ToyotaCasePage() {
   const { t } = useLanguage()
   
   return (

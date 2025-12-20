@@ -23,12 +23,9 @@ export function ProximityMagneticCard({
   const cardRef = useRef<HTMLDivElement>(null)
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [isInRange, setIsInRange] = useState(false)
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePos({ x: e.clientX, y: e.clientY })
-      
       if (!cardRef.current) return
 
       const rect = cardRef.current.getBoundingClientRect()

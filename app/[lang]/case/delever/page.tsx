@@ -4,9 +4,8 @@ import CaseNav from '../../../../components/CaseNav'
 import { useLanguage } from '../../../../context/LanguageContext'
 import '../../../../styles/case-nav.css'
 import './delever.css'
-import { Locale } from '../../../../lib/i18n'
 
-export default function DeleverCasePage({ params }: { params: { lang: Locale } }) {
+export default function DeleverCasePage() {
   const { t } = useLanguage()
   
   return (

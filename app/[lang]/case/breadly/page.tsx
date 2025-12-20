@@ -4,9 +4,8 @@ import CaseNav from '../../../../components/CaseNav'
 import { useLanguage } from '../../../../context/LanguageContext'
 import '../../../../styles/case-nav.css'
 import './breadly.css'
-import { Locale } from '../../../../lib/i18n'
 
-export default function BreadlyCasePage({ params }: { params: { lang: Locale } }) {
+export default function BreadlyCasePage() {
   const { t, locale } = useLanguage()
   
   return (
