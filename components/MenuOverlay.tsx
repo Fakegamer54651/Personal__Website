@@ -65,7 +65,7 @@ function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                     <img 
                       src="/close.svg" 
                       alt="Close" 
-                      className="menu-icon"
+                      style={{ width: '18px', height: '18px', display: 'block' }}
                     />
                   </button>
                   <button 

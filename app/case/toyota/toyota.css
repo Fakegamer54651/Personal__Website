@@ -7,20 +7,19 @@
   padding: 80px 20px;
 }
 
-/* Scoped to Toyota case page to avoid conflicts with other case studies */
-.toyota-case-page .case-container {
+.case-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 290px;
 }
 
-/* Hero Section - scoped to Toyota */
-.toyota-case-page .case-hero {
+/* Hero Section */
+.case-hero {
   padding: 100px 0 80px;
   text-align: center;
 }
 
-.toyota-case-page .case-title {
+.case-title {
   font-family: 'Schibsted Grotesk', sans-serif;
   font-size: 64px;
   font-weight: 400;
@@ -31,7 +30,7 @@
   margin-bottom: 40px;
 }
 
-.toyota-case-page .case-description {
+.case-description {
   font-family: 'Schibsted Grotesk', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -41,8 +40,8 @@
   margin: 0 auto;
 }
 
-/* Section Styles - scoped to Toyota */
-.toyota-case-page .case-section {
+/* Section Styles */
+.case-section {
   padding: 60px 0;
 }
 
@@ -303,29 +302,29 @@
     padding: 28px 12px 20px;
   }
   
-  .toyota-case-page .case-container {
+  .case-container {
     padding: 0;
     max-width: 351px;
   }
 
-  .toyota-case-page .case-hero {
+  .case-hero {
     padding: 0 0 40px;
   }
 
-  .toyota-case-page .case-title {
+  .case-title {
     font-size: 40px;
     line-height: 64px;
     letter-spacing: -1.28px;
     margin-bottom: 32px;
   }
 
-  .toyota-case-page .case-description {
+  .case-description {
     font-size: 14px;
     font-weight: 500;
     line-height: 26px;
   }
 
-  .toyota-case-page .case-section {
+  .case-section {
     padding: 0;
   }
 

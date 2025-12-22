@@ -20,7 +20,7 @@ function CaseNav() {
             <img 
               src="/close.svg" 
               alt="Close" 
-              className="menu-icon"
+              style={{ width: '18px', height: '18px', display: 'block' }}
             />
           </Link>
           <button className="nav-button language-btn" onClick={toggleLanguage}>

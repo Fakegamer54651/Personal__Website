@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { BlurFade } from '../components/ui/BlurFade'
 import { useLanguage } from '../context/LanguageContext'
 
@@ -24,16 +25,26 @@ function FeaturedWork() {
                 className="case-card delever-card"
                 title="Delever Courier App Redesign - Mobile UX Case Study"
               >
-                <img 
+                <Image 
                   src="/Delever card.jpg" 
                   alt="Delever" 
                   className="case-image"
+                  width={800}
+                  height={600}
+                  quality={75}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="case-image-overlay">
-                  <img 
+                  <Image 
                     src="/Delever card.jpg" 
                     alt="Delever Courier App" 
                     className="case-image"
+                    width={800}
+                    height={600}
+                    quality={75}
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className="case-hover-overlay">
@@ -49,16 +60,26 @@ function FeaturedWork() {
                 className="case-card toyota-card"
                 title="Toyota Inventory System Redesign - UI/UX Case Study"
               >
-                <img 
+                <Image 
                   src="/TOYOTA HOVER.jpg" 
                   alt="Toyota" 
                   className="case-image"
+                  width={800}
+                  height={600}
+                  quality={75}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="case-image-overlay">
-                  <img 
+                  <Image 
                     src="/TOYOTA HOVER.jpg" 
                     alt="Toyota Dashboard" 
                     className="case-image"
+                    width={800}
+                    height={600}
+                    quality={75}
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className="case-hover-overlay">
@@ -73,16 +94,26 @@ function FeaturedWork() {
           <div className="featured-row">
             <BlurFade delay={0.41} inView>
               <div className="case-card clique-card">
-                <img 
+                <Image 
                   src="/Clique card.jpg" 
                   alt="Clique" 
                   className="case-image"
+                  width={800}
+                  height={600}
+                  quality={75}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="case-image-overlay">
-                  <img 
+                  <Image 
                     src="/Clique card.jpg" 
                     alt="Clique detail" 
                     className="case-image"
+                    width={800}
+                    height={600}
+                    quality={75}
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className="case-hover-overlay">
@@ -98,16 +129,26 @@ function FeaturedWork() {
                 className="case-card bready-card"
                 title="Breadly Website Design - Clean UI/UX Case Study"
               >
-                <img 
+                <Image 
                   src="/Breadly card.jpg" 
                   alt="Breadly" 
                   className="case-image"
+                  width={800}
+                  height={600}
+                  quality={75}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="case-image-overlay">
-                  <img 
+                  <Image 
                     src="/Breadly card.jpg" 
                     alt="Breadly Bakery" 
                     className="case-image"
+                    width={800}
+                    height={600}
+                    quality={75}
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className="case-hover-overlay">

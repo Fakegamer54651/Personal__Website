@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect } from 'react'
+import Image from 'next/image'
 import CaseNav from '../../../../components/CaseNav'
 import { useLanguage } from '../../../../context/LanguageContext'
 import '../../../../styles/case-nav.css'
@@ -7,6 +9,15 @@ import './breadly.css'
 
 export default function BreadlyCasePage() {
   const { t, locale } = useLanguage()
+  
+  // Force layout recalculation on mount to fix responsive breakpoints after navigation
+  useEffect(() => {
+    // Trigger resize event to force media queries to re-evaluate
+    window.dispatchEvent(new Event('resize'))
+    
+    // Force reflow by reading layout properties
+    document.body.offsetHeight
+  }, [])
   
   return (
     <div className="breadly-case-page">
@@ -26,14 +37,14 @@ export default function BreadlyCasePage() {
           {/* First Image Group */}
           <div className="image-gallery">
             <div className="big-frame-image">
-              <img src="/Breadly_c1.jpg" alt="Breadly Main View" />
+              <Image src="/Breadly_c1.jpg" alt="Breadly Main View" width={1200} height={800} quality={80} priority fetchPriority="high" sizes="(max-width: 768px) 100vw, 860px" />
             </div>
             <div className="small-frames-row">
               <div className="small-frame-image">
-                <img src="/Breadly_c2.jpg" alt="Breadly Interface 1" />
+                <Image src="/Breadly_c2.jpg" alt="Breadly Interface 1" width={422} height={422} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 342px, 422px" />
               </div>
               <div className="small-frame-image">
-                <img src="/Breadly_c3.jpg" alt="Breadly Interface 2" />
+                <Image src="/Breadly_c3.jpg" alt="Breadly Interface 2" width={422} height={422} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 342px, 422px" />
               </div>
             </div>
           </div>
@@ -43,7 +54,7 @@ export default function BreadlyCasePage() {
             <h2 className="section-heading">{t('breadly.companyTitle')}</h2>
             <p className="section-text">{t('breadly.companyText')}</p>
             <div className="logo-container">
-              <img src="/Breadly_c4.jpg" alt="Breadly Logo" className="breadly-logo" />
+              <Image src="/Breadly_c4.jpg" alt="Breadly Logo" className="breadly-logo" width={280} height={80} quality={80} loading="lazy" />
             </div>
           </div>
         </div>
@@ -68,42 +79,42 @@ export default function BreadlyCasePage() {
             <div className="work-gallery">
               {/* Image 5 */}
               <div className="big-frame-image">
-                <img src="/Breadly_c5.jpg" alt="Breadly Design 1" />
+                <Image src="/Breadly_c5.jpg" alt="Breadly Design 1" width={1200} height={800} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, 860px" />
               </div>
               
               {/* Image 6 */}
               <div className="big-frame-image">
-                <img src="/Breadly_c6.jpg" alt="Breadly Design 2" />
+                <Image src="/Breadly_c6.jpg" alt="Breadly Design 2" width={1200} height={800} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, 860px" />
               </div>
               
               {/* Images 7 & 8 */}
               <div className="small-frames-row">
                 <div className="small-frame-image">
-                  <img src="/Breadly_c7.jpg" alt="Breadly Detail 1" />
+                  <Image src="/Breadly_c7.jpg" alt="Breadly Detail 1" width={422} height={422} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 342px, 422px" />
                 </div>
                 <div className="small-frame-image">
-                  <img src="/Breadly_c8.jpg" alt="Breadly Detail 2" />
+                  <Image src="/Breadly_c8.jpg" alt="Breadly Detail 2" width={422} height={422} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 342px, 422px" />
                 </div>
               </div>
               
               {/* Image 9 */}
               <div className="big-frame-image">
-                <img src="/Breadly_c9.jpg" alt="Breadly Design 3" />
+                <Image src="/Breadly_c9.jpg" alt="Breadly Design 3" width={1200} height={800} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, 860px" />
               </div>
               
               {/* Images 10 & 11 */}
               <div className="small-frames-row">
                 <div className="small-frame-image">
-                  <img src="/Breadly_c10.jpg" alt="Breadly Detail 3" />
+                  <Image src="/Breadly_c10.jpg" alt="Breadly Detail 3" width={422} height={422} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 342px, 422px" />
                 </div>
                 <div className="small-frame-image">
-                  <img src="/Breadly_c11.jpg" alt="Breadly Detail 4" />
+                  <Image src="/Breadly_c11.jpg" alt="Breadly Detail 4" width={422} height={422} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 342px, 422px" />
                 </div>
               </div>
               
               {/* Image 12 */}
               <div className="big-frame-image">
-                <img src="/Breadly_c12.jpg" alt="Breadly Design 4" />
+                <Image src="/Breadly_c12.jpg" alt="Breadly Design 4" width={1200} height={800} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, 860px" />
               </div>
             </div>
           </div>

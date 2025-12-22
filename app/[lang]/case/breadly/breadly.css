@@ -7,19 +7,20 @@
   padding-bottom: 120px;
 }
 
-.case-hero {
+/* Scoped to Breadly case page to avoid conflicts */
+.breadly-case-page .case-hero {
   padding: 72px 20px 56px;
   display: flex;
   justify-content: center;
 }
 
-.case-container {
+.breadly-case-page .case-container {
   max-width: 860px;
   width: 100%;
   margin: 0 auto;
 }
 
-.case-title {
+.breadly-case-page .case-title {
   font-family: 'Schibsted Grotesk', sans-serif;
   font-weight: 400;
   font-size: 64px;
@@ -31,7 +32,7 @@
   margin: 0 0 21px 0;
 }
 
-.case-description {
+.breadly-case-page .case-description {
   font-family: 'Schibsted Grotesk', sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -42,7 +43,7 @@
   margin: 0 auto;
 }
 
-.case-section {
+.breadly-case-page .case-section {
   padding: 0 20px;
   margin-bottom: 56px;
 }
@@ -81,7 +82,7 @@
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
-  background: #f1f1f1;
+  background: #ffffff;
 }
 
 .big-frame-image img {
@@ -196,50 +197,68 @@
   opacity: 0.7;
 }
 
-/* Responsive Design */
+/* Responsive Design - Scoped to Breadly */
 @media (max-width: 1024px) {
-  .case-title {
+  .breadly-case-page .case-title {
     font-size: 48px;
     line-height: 60px;
   }
   
-  .case-container {
+  .breadly-case-page .case-container {
     max-width: 700px;
   }
   
-  .small-frame-image {
+  .breadly-case-page .small-frame-image {
     width: 342px;
     height: 342px;
+  }
+  
+  /* Change image frame backgrounds to white on smaller screens */
+  .breadly-case-page .big-frame-image {
+    background: #ffffff;
+  }
+  
+  .breadly-case-page .small-frame-image {
+    background: #ffffff;
   }
 }
 
 @media (max-width: 768px) {
-  .case-title {
+  .breadly-case-page .case-title {
     font-size: 36px;
     line-height: 48px;
     letter-spacing: -0.72px;
   }
   
-  .case-description,
-  .section-text {
+  .breadly-case-page .case-description,
+  .breadly-case-page .section-text {
     font-size: 16px;
     line-height: 26px;
   }
   
-  .section-heading {
+  .breadly-case-page .section-heading {
     font-size: 20px;
     line-height: 32px;
   }
   
-  .small-frames-row {
+  .breadly-case-page .small-frames-row {
     flex-direction: column;
     gap: 16px;
   }
   
-  .small-frame-image {
+  .breadly-case-page .small-frame-image {
     width: 100%;
     height: auto;
     aspect-ratio: 1;
+  }
+  
+  /* Change image frame backgrounds to white on tablet/mobile */
+  .breadly-case-page .big-frame-image {
+    background: #ffffff;
+  }
+  
+  .breadly-case-page .small-frame-image {
+    background: #ffffff;
   }
 }
 
@@ -248,62 +267,72 @@
     padding-bottom: 80px;
   }
   
-  .case-hero {
+  .breadly-case-page .case-hero {
     padding: 40px 16px;
   }
   
-  .case-section {
+  .breadly-case-page .case-section {
     padding: 0 16px;
   }
   
-  .case-title {
+  .breadly-case-page .case-title {
     font-size: 28px;
     line-height: 36px;
     margin-bottom: 16px;
   }
   
-  .case-description,
-  .section-text {
+  .breadly-case-page .case-description,
+  .breadly-case-page .section-text {
     font-size: 14px;
     line-height: 24px;
   }
   
-  .section-heading {
+  .breadly-case-page .section-heading {
     font-size: 18px;
     line-height: 28px;
     margin-bottom: 24px;
   }
   
-  .big-frame-image,
-  .small-frame-image,
-  .logo-container {
+  .breadly-case-page .big-frame-image,
+  .breadly-case-page .small-frame-image,
+  .breadly-case-page .logo-container {
     border-radius: 4px;
   }
   
-  .image-gallery,
-  .work-gallery {
+  /* Change image frame backgrounds to white on mobile */
+  .breadly-case-page .big-frame-image {
+    background: #ffffff;
+  }
+  
+  .breadly-case-page .small-frame-image {
+    background: #ffffff;
+  }
+  
+  .breadly-case-page .image-gallery,
+  .breadly-case-page .work-gallery {
     gap: 12px;
   }
   
-  .work-gallery {
+  .breadly-case-page .work-gallery {
     gap: 60px;
   }
   
-  .logo-container {
+  .breadly-case-page .logo-container {
     height: 80px;
   }
   
-  .results-list li {
+  .breadly-case-page .results-list li {
     font-size: 16px;
     line-height: 28px;
     margin-bottom: 24px;
   }
   
-  .results-note,
-  .website-link {
+  .breadly-case-page .results-note,
+  .breadly-case-page .website-link {
     font-size: 16px;
     line-height: 28px;
   }
 }
+
 
 

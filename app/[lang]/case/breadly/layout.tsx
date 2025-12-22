@@ -65,7 +65,10 @@ export default function BreadlyCaseLayout({
           }),
         }}
       />
-      {children}
+      {/* Key forces remount on route change to prevent CSS conflicts */}
+      <div key="breadly-case">
+        {children}
+      </div>
     </>
   )
 }

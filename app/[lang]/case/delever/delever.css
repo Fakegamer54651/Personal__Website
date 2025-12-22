@@ -7,19 +7,20 @@
   padding-bottom: 120px;
 }
 
-.case-hero {
+/* Scoped to Delever case page to avoid conflicts */
+.delever-case-page .case-hero {
   padding: 56px 20px;
   display: flex;
   justify-content: center;
 }
 
-.case-container {
+.delever-case-page .case-container {
   max-width: 860px;
   width: 100%;
   margin: 0 auto;
 }
 
-.case-title {
+.delever-case-page .case-title {
   font-family: 'Schibsted Grotesk', sans-serif;
   font-weight: 400;
   font-size: 64px;
@@ -31,7 +32,7 @@
   margin: 0 0 40px 0;
 }
 
-.case-description {
+.delever-case-page .case-description {
   font-family: 'Schibsted Grotesk', sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -42,7 +43,7 @@
   margin: 0 auto;
 }
 
-.case-section {
+.delever-case-page .case-section {
   padding: 0 20px;
   margin-bottom: 56px;
 }
@@ -94,6 +95,7 @@
   width: 100%;
   height: auto;
   display: block;
+  object-fit: contain;
 }
 
 .company-info,
@@ -163,46 +165,46 @@
   margin-bottom: 0;
 }
 
-/* Responsive Design */
+/* Responsive Design - Scoped to Delever */
 @media (max-width: 1024px) {
-  .case-title {
+  .delever-case-page .case-title {
     font-size: 48px;
     line-height: 60px;
   }
   
-  .case-container {
+  .delever-case-page .case-container {
     max-width: 700px;
   }
 }
 
 @media (max-width: 768px) {
-  .case-title {
+  .delever-case-page .case-title {
     font-size: 36px;
     line-height: 48px;
     letter-spacing: -0.72px;
   }
   
-  .case-description,
-  .section-text {
+  .delever-case-page .case-description,
+  .delever-case-page .section-text {
     font-size: 18px;
     line-height: 28px;
   }
   
-  .section-heading {
+  .delever-case-page .section-heading {
     font-size: 20px;
     line-height: 32px;
   }
   
-  .stats-container {
+  .delever-case-page .stats-container {
     flex-direction: column;
     gap: 32px;
   }
   
-  .stat-number {
+  .delever-case-page .stat-number {
     font-size: 32px;
   }
   
-  .stat-label {
+  .delever-case-page .stat-label {
     font-size: 18px;
   }
 }
@@ -212,43 +214,44 @@
     padding-bottom: 80px;
   }
   
-  .case-hero {
+  .delever-case-page .case-hero {
     padding: 40px 16px;
   }
   
-  .case-section {
+  .delever-case-page .case-section {
     padding: 0 16px;
   }
   
-  .case-title {
+  .delever-case-page .case-title {
     font-size: 28px;
     line-height: 36px;
     margin-bottom: 24px;
   }
   
-  .case-description,
-  .section-text {
+  .delever-case-page .case-description,
+  .delever-case-page .section-text {
     font-size: 16px;
     line-height: 24px;
   }
   
-  .section-heading {
+  .delever-case-page .section-heading {
     font-size: 18px;
     line-height: 28px;
     margin-bottom: 24px;
   }
   
-  .big-frame-image,
-  .small-frame-image {
+  .delever-case-page .big-frame-image,
+  .delever-case-page .small-frame-image {
     border-radius: 16px;
     margin-bottom: 24px;
   }
   
-  .results-list li {
+  .delever-case-page .results-list li {
     font-size: 16px;
     line-height: 28px;
     margin-bottom: 24px;
   }
 }
+
 
 

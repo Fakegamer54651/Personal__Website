@@ -64,7 +64,10 @@ export default function DeleverCaseLayout({
           }),
         }}
       />
-      {children}
+      {/* Key forces remount on route change to prevent CSS conflicts */}
+      <div key="delever-case">
+        {children}
+      </div>
     </>
   )
 }

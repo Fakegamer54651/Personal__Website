@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { BlurFade } from '../components/ui/BlurFade'
 import { useLanguage } from '../context/LanguageContext'
 
@@ -19,10 +20,15 @@ function UIShots() {
           <div className="ui-row">
             <BlurFade delay={0.25} inView>
               <div className="ui-card">
-                <img 
+                <Image 
                   src="/UI card 1.jpg" 
                   alt="UI Shot 1" 
                   className="ui-image"
+                  width={600}
+                  height={600}
+                  quality={80}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
             </BlurFade>
@@ -43,10 +49,15 @@ function UIShots() {
             
             <BlurFade delay={0.41} inView>
               <div className="ui-card">
-                <img 
+                <Image 
                   src="/UI card 3.jpg" 
                   alt="UI Shot 3" 
                   className="ui-image"
+                  width={600}
+                  height={600}
+                  quality={80}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
             </BlurFade>
@@ -56,10 +67,15 @@ function UIShots() {
           <div className="ui-row">
             <BlurFade delay={0.49} inView>
               <div className="ui-card">
-                <img 
+                <Image 
                   src="/UI card 4.jpg" 
                   alt="UI Shot 4" 
                   className="ui-image"
+                  width={600}
+                  height={600}
+                  quality={80}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
             </BlurFade>
@@ -80,10 +96,15 @@ function UIShots() {
             
             <BlurFade delay={0.65} inView>
               <div className="ui-card">
-                <img 
+                <Image 
                   src="/UI card 6.jpg" 
                   alt="UI Shot 6" 
                   className="ui-image"
+                  width={600}
+                  height={600}
+                  quality={80}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
             </BlurFade>

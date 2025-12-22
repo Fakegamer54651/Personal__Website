@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect } from 'react'
+import Image from 'next/image'
 import CaseNav from '../../../../components/CaseNav'
 import { useLanguage } from '../../../../context/LanguageContext'
 import '../../../../styles/case-nav.css'
@@ -7,6 +9,15 @@ import './delever.css'
 
 export default function DeleverCasePage() {
   const { t } = useLanguage()
+  
+  // Force layout recalculation on mount to fix responsive breakpoints after navigation
+  useEffect(() => {
+    // Trigger resize event to force media queries to re-evaluate
+    window.dispatchEvent(new Event('resize'))
+    
+    // Force reflow by reading layout properties
+    document.body.offsetHeight
+  }, [])
   
   return (
     <div className="delever-case-page">
@@ -32,7 +43,7 @@ export default function DeleverCasePage() {
         <div className="case-container">
           {/* First Image */}
           <div className="big-frame-image">
-            <img src="/Delevercase1.jpg" alt="Delever App Overview" />
+            <Image src="/Delevercase1.jpg" alt="Delever App Overview" width={1200} height={800} quality={80} priority fetchPriority="high" sizes="(max-width: 768px) 100vw, 860px" />
           </div>
 
           {/* Company Information */}
@@ -40,7 +51,7 @@ export default function DeleverCasePage() {
             <h2 className="section-heading">{t('delever.companyTitle')}</h2>
             <p className="section-text">{t('delever.companyText')}</p>
             <div className="small-frame-image">
-              <img src="/Delevercase2.jpg" alt="Delever Platform" />
+              <Image src="/Delevercase2.jpg" alt="Delever Platform" width={1200} height={800} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, 860px" />
             </div>
           </div>
         </div>
@@ -88,7 +99,7 @@ export default function DeleverCasePage() {
               ))}
             </p>
             <div className="big-frame-image">
-              <img src="/Delevercase3.jpg" alt="Focus Areas" />
+              <Image src="/Delevercase3.jpg" alt="Focus Areas" width={1200} height={800} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, 860px" />
             </div>
           </div>
 
@@ -104,7 +115,7 @@ export default function DeleverCasePage() {
               ))}
             </p>
             <div className="big-frame-image">
-              <img src="/Delevercase4.jpg" alt="Problems Analysis" />
+              <Image src="/Delevercase4.jpg" alt="Problems Analysis" width={1200} height={800} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, 860px" />
             </div>
           </div>
 
@@ -113,10 +124,10 @@ export default function DeleverCasePage() {
             <h2 className="section-heading">{t('delever.wireframesTitle')}</h2>
             <p className="section-text">{t('delever.wireframesText')}</p>
             <div className="big-frame-image">
-              <img src="/Delevercase5.jpg" alt="Wireframes 1" />
+              <Image src="/Delevercase5.jpg" alt="Wireframes 1" width={1200} height={800} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, 860px" />
             </div>
             <div className="big-frame-image">
-              <img src="/Delevercase6.jpg" alt="Wireframes 2" />
+              <Image src="/Delevercase6.jpg" alt="Wireframes 2" width={1200} height={800} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, 860px" />
             </div>
           </div>
 
@@ -132,10 +143,10 @@ export default function DeleverCasePage() {
               ))}
             </p>
             <div className="big-frame-image">
-              <img src="/Delevercase7.jpg" alt="A/B Testing Version A" />
+              <Image src="/Delevercase7.jpg" alt="A/B Testing Version A" width={1200} height={800} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, 860px" />
             </div>
             <div className="big-frame-image">
-              <img src="/Delevercase8.jpg" alt="A/B Testing Version B" />
+              <Image src="/Delevercase8.jpg" alt="A/B Testing Version B" width={1200} height={800} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, 860px" />
             </div>
           </div>
 
@@ -151,7 +162,7 @@ export default function DeleverCasePage() {
               ))}
             </p>
             <div className="big-frame-image">
-              <img src="/Delevercase9.jpg" alt="Final UI Design" />
+              <Image src="/Delevercase9.jpg" alt="Final UI Design" width={1200} height={800} quality={75} loading="lazy" sizes="(max-width: 768px) 100vw, 860px" />
             </div>
           </div>
 

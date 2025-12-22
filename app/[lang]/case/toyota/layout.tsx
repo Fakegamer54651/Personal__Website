@@ -52,7 +52,10 @@ export default function ToyotaCaseLayout({
           }),
         }}
       />
-      {children}
+      {/* Key forces remount on route change to prevent CSS conflicts */}
+      <div key="toyota-case">
+        {children}
+      </div>
     </>
   )
 }

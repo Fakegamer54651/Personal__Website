@@ -23,6 +23,76 @@
   gap: 8px;
 }
 
+/* Navigation buttons */
+.about-nav .nav-left {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.about-nav .nav-button {
+  background: #d2d2d2;
+  border: none;
+  border-radius: 24px;
+  padding: 15px;
+  height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 9px 21px 0px rgba(0,0,0,0.1),
+              0px 38px 38px 0px rgba(0,0,0,0.09),
+              0px 85px 51px 0px rgba(0,0,0,0.05),
+              0px 151px 60px 0px rgba(0,0,0,0.01);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.about-nav .nav-button:hover {
+  background: #c2c2c2;
+  transform: scale(1.1);
+}
+
+.about-nav .menu-button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.about-nav .menu-icon {
+  width: 18px !important;
+  height: 18px !important;
+  display: block !important;
+  object-fit: contain;
+}
+
+.about-nav .language-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.26px;
+  text-transform: uppercase;
+  color: #363636;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-nav .resume-btn {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.26px;
+  text-transform: uppercase;
+  color: #363636;
+  padding: 12px 24px;
+}
+
 /* About Page Container */
 .about-page-container {
   display: flex;

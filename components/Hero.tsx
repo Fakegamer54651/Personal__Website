@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { BlurFade } from './ui/BlurFade'
 import { ProximityMagneticCard } from './ui/ProximityMagneticCard'
 import { useLanguage } from '../context/LanguageContext'
@@ -114,9 +115,15 @@ function Hero() {
                   <div className="logo-card-container card-1">
                     <div className="logo-card-inner">
                       <div className="logo-card">
-                        <img 
+                        <Image 
                           src="/first image.jpg" 
                           alt="SNAPTC" 
+                          width={400}
+                          height={400}
+                          quality={80}
+                          priority
+                          fetchPriority="high"
+                          sizes="(max-width: 768px) 150px, 200px"
                         />
                       </div>
                     </div>
@@ -129,9 +136,14 @@ function Hero() {
                   <div className="logo-card-container card-2">
                     <div className="logo-card-inner">
                       <div className="logo-card">
-                        <img 
+                        <Image 
                           src="/2nd image.jpg" 
                           alt="Toyota" 
+                          width={400}
+                          height={400}
+                          quality={80}
+                          priority
+                          sizes="(max-width: 768px) 150px, 200px"
                         />
                       </div>
                     </div>
@@ -144,9 +156,14 @@ function Hero() {
                   <div className="logo-card-container card-3">
                     <div className="logo-card-inner">
                       <div className="logo-card">
-                        <img 
+                        <Image 
                           src="/3rd image.jpg" 
                           alt="Delever" 
+                          width={400}
+                          height={400}
+                          quality={80}
+                          priority
+                          sizes="(max-width: 768px) 150px, 200px"
                         />
                       </div>
                     </div>
@@ -159,9 +176,14 @@ function Hero() {
                   <div className="logo-card-container card-4">
                     <div className="logo-card-inner">
                       <div className="logo-card">
-                        <img 
+                        <Image 
                           src="/4th image.jpg" 
                           alt="Clique" 
+                          width={400}
+                          height={400}
+                          quality={80}
+                          priority
+                          sizes="(max-width: 768px) 150px, 200px"
                         />
                       </div>
                     </div>

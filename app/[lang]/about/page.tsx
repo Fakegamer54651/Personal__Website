@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useLanguage } from '../../../context/LanguageContext'
 import ImageViewer from '../../../components/ImageViewer'
 import { BlurFade } from '../../../components/ui/BlurFade'
@@ -72,7 +73,7 @@ export default function About() {
           <div className="about-nav">
             <div className="nav-left">
               <Link href={`/${locale}`} className="nav-button menu-button" aria-label="Home">
-                <img src="/close.svg" alt="Back to Home" className="menu-icon" />
+                <img src="/close.svg" alt="Back to Home" style={{ width: '18px', height: '18px', display: 'block' }} />
               </Link>
               <button className="nav-button language-btn" onClick={toggleLanguage}>
                 {language}
@@ -109,10 +110,10 @@ export default function About() {
                     </div>
                     <div className="about-images">
                       <div className="about-image-small" onClick={() => openViewer('/about_image_1.jpg')}>
-                        <img src="/about_image_1.jpg" alt="Asilbek Khamidullayev Profile" style={{ cursor: 'pointer' }} />
+                        <Image src="/about_image_1.jpg" alt="Asilbek Khamidullayev Profile" width={600} height={600} quality={80} loading="lazy" sizes="(max-width: 768px) 50vw, 300px" style={{ cursor: 'pointer' }} />
                       </div>
                       <div className="about-image-small" onClick={() => openViewer('/about_image_2.jpg')}>
-                        <img src="/about_image_2.jpg" alt="Work environment" style={{ cursor: 'pointer' }} />
+                        <Image src="/about_image_2.jpg" alt="Work environment" width={600} height={600} quality={80} loading="lazy" sizes="(max-width: 768px) 50vw, 300px" style={{ cursor: 'pointer' }} />
                       </div>
                     </div>
                   </div>
@@ -128,7 +129,7 @@ export default function About() {
                       <p>{t('about.experience4')}</p>
                     </div>
                     <div className="about-image-medium" onClick={() => openViewer('/about_image_3.jpg')}>
-                      <img src="/about_image_3.jpg" alt="Design experience" style={{ cursor: 'pointer' }} />
+                      <Image src="/about_image_3.jpg" alt="Design experience" width={800} height={600} quality={80} loading="lazy" sizes="(max-width: 768px) 100vw, 600px" style={{ cursor: 'pointer' }} />
                     </div>
                   </div>
                 </BlurFade>
@@ -144,10 +145,10 @@ export default function About() {
                     </div>
                     <div className="about-images">
                       <div className="about-image-rect-1" onClick={() => openViewer('/about_image_4.jpg')}>
-                        <img src="/about_image_4.jpg" alt="Internal tools design" style={{ cursor: 'pointer' }} />
+                        <Image src="/about_image_4.jpg" alt="Internal tools design" width={800} height={500} quality={80} loading="lazy" sizes="(max-width: 768px) 100vw, 600px" style={{ cursor: 'pointer' }} />
                       </div>
                       <div className="about-image-rect-2" onClick={() => openViewer('/about_image_5.jpg')}>
-                        <img src="/about_image_5.jpg" alt="System design" style={{ cursor: 'pointer' }} />
+                        <Image src="/about_image_5.jpg" alt="System design" width={800} height={500} quality={80} loading="lazy" sizes="(max-width: 768px) 100vw, 600px" style={{ cursor: 'pointer' }} />
                       </div>
                     </div>
                   </div>
@@ -158,7 +159,7 @@ export default function About() {
                   <div className="about-section">
                     <div className="about-snaptools">
                       <div className="snaptools-logo">
-                        <img src="/snaptools_logo.jpg" alt="SnapTools Logo" />
+                        <Image src="/snaptools_logo.jpg" alt="SnapTools Logo" width={200} height={80} quality={85} loading="lazy" />
                       </div>
                       <p className="snaptools-subtitle">{t('about.snaptoolsSubtitle')}</p>
                     </div>
@@ -171,7 +172,7 @@ export default function About() {
                       {t('about.snaptoolsLink')}
                     </a>
                     <div className="about-image-snaptools" onClick={() => openViewer('/about_image_6.jpg')}>
-                      <img src="/about_image_6.jpg" alt="SnapTools product" style={{ cursor: 'pointer' }} />
+                      <Image src="/about_image_6.jpg" alt="SnapTools product" width={1200} height={800} quality={80} loading="lazy" sizes="(max-width: 768px) 100vw, 900px" style={{ cursor: 'pointer' }} />
                     </div>
                   </div>
                 </BlurFade>
@@ -185,13 +186,13 @@ export default function About() {
                     </div>
                     <div className="about-images-personal">
                       <div className="about-image-personal-1" onClick={() => openViewer('/about_image_7.jpg')}>
-                        <img src="/about_image_7.jpg" alt="Personal life - calisthenics" style={{ cursor: 'pointer' }} />
+                        <Image src="/about_image_7.jpg" alt="Personal life - calisthenics" width={600} height={800} quality={80} loading="lazy" sizes="(max-width: 768px) 100vw, 400px" style={{ cursor: 'pointer' }} />
                       </div>
                       <div className="about-image-personal-2" onClick={() => openViewer('/about_image_8.jpg')}>
-                        <img src="/about_image_8.jpg" alt="Personal interests" style={{ cursor: 'pointer' }} />
+                        <Image src="/about_image_8.jpg" alt="Personal interests" width={600} height={800} quality={80} loading="lazy" sizes="(max-width: 768px) 100vw, 400px" style={{ cursor: 'pointer' }} />
                       </div>
                       <div className="about-image-personal-3" onClick={() => openViewer('/about_image_9.jpg')}>
-                        <img src="/about_image_9.jpg" alt="Lifestyle" style={{ cursor: 'pointer' }} />
+                        <Image src="/about_image_9.jpg" alt="Lifestyle" width={600} height={800} quality={80} loading="lazy" sizes="(max-width: 768px) 100vw, 400px" style={{ cursor: 'pointer' }} />
                       </div>
                     </div>
                   </div>
